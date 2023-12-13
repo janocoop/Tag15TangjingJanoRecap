@@ -18,9 +18,17 @@ public class Controller {
         return service.findAll();
     }
 
-    @PostMapping()
-    ToDo save(@RequestBody NewToDo newTodo) {
-        return service.save("content", newTodo);
+    @PutMapping()
+    ToDo meow(@RequestBody ToDo task) {
+        return service.meow(task);
     }
 
-}
+
+    @PostMapping("/todo")
+    public ToDo add(@RequestBody ToDo task){
+       return service.add(task);
+    }}
+
+
+
+

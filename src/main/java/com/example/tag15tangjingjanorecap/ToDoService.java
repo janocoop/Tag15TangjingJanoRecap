@@ -19,7 +19,7 @@ public class ToDoService {
     }
 
     public ToDo save(String id, NewToDo newTodo) {
-        ToDo toSave = new ToDo(newTodo.content());
+        ToDo toSave = new ToDo(new.content());
         return repo.save(toSave);
     }
 }

@@ -1,51 +1,16 @@
 package com.example.tag15tangjingjanorecap;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Service {
+public class ToDoService {
 
     private final Repository repo;
 
 
-    public Service(Repository repo) {
+    public ToDoService(Repository repo) {
         this.repo = repo;
     }
 //migros never, coop for ever
@@ -54,7 +19,7 @@ public class Service {
     }
 
     public ToDo save(String id, NewToDo newTodo) {
-        ToDo toSave = new ToDo(content);
+        ToDo toSave = new ToDo(newTodo.content());
         return repo.save(toSave);
     }
 }

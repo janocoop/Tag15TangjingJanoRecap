@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Controller {
 
-    private final Service service;
+    private final ToDoService service;
 
     @GetMapping
     List<ToDo> findAll() {
@@ -20,7 +20,7 @@ public class Controller {
 
     @PostMapping()
     ToDo save(@RequestBody NewToDo newTodo) {
-        return service.save(content, newTodo);
+        return service.save("content", newTodo);
     }
 
 }
